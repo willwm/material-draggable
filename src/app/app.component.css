@@ -1,17 +1,32 @@
+.example-table {
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12) !important;
+  border-color: grey;
+  color: #333;
+  font-size: 0.9rem;
+}
+
+.example-header,
 .example-list {
-  width: 500px;
-  max-width: 100%;
-  border: solid 1px #ccc;
+  width: auto;
+}
+
+.example-header {
+  background-color: #CEBDDB;
+  padding: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.example-list {
   min-height: 60px;
   display: block;
   background: white;
-  border-radius: 4px;
   overflow: hidden;
+  
 }
 
 .example-box {
-  padding: 20px 10px;
-  border-bottom: solid 1px #ccc;
+  padding: 1rem;
   color: rgba(0, 0, 0, 0.87);
   display: flex;
   flex-direction: row;
@@ -21,11 +36,15 @@
   cursor: move;
   background: white;
   font-size: 14px;
+  border-top: 1px solid #dee2e6;
+}
+
+.example-box:nth-of-type(odd) {
+    background-color: rgba(0,0,0,0.05);
 }
 
 .cdk-drag-preview {
   box-sizing: border-box;
-  border-radius: 4px;
   box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
               0 8px 10px 1px rgba(0, 0, 0, 0.14),
               0 3px 14px 2px rgba(0, 0, 0, 0.12);
