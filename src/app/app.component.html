@@ -1,5 +1,5 @@
 <mat-card>
-  💡 Try dragging the items in the list below!
+	💡 Try dragging the items in the list below!
 </mat-card>
 
 <div class="example-table">
@@ -8,13 +8,13 @@
 	</div>
 
 	<div cdkDropList class="example-list" (cdkDropListDropped)="drop($event)">
-		<div class="example-box" *ngFor="let assignment of assignments" cdkDrag>{{assignment}}</div>
+		<div class="example-box" *ngFor="let assignment of assignments" cdkDrag cdkDragBoundary=".example-list">{{assignment}}</div>
 	</div>
 </div>
 
 <div class="more-info">
-  More info:
-  <a href="https://material.angular.io/cdk/drag-drop/overview#reordering-lists">
-  Drag and Drop | Angular Material
-  </a>
+	More info:
+	<a href="https://material.angular.io/cdk/drag-drop/overview#reordering-lists">
+		Drag and Drop | Angular Material
+	</a>
 </div>

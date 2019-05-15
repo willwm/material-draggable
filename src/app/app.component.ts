@@ -20,5 +20,13 @@ export class AppComponent {
 
   drop(event: CdkDragDrop<string[]>) {
     moveItemInArray(this.assignments, event.previousIndex, event.currentIndex);
+
+    const logObject = {
+      assignments: this.assignments,
+      previousIndex: event.previousIndex,
+      currentIndex: event.currentIndex,
+      itemMoved: this.assignments[event.currentIndex]
+    };
+    console.log(logObject);
   }
 }
