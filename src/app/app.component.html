@@ -2,19 +2,16 @@
 	💡 Try dragging the items in the list below!
 </mat-card>
 
-<div class="example-table">
-	<div class="example-header">
+<div class="table">
+	<div class="table-header">
 		Assignment Name
 	</div>
 
-	<div cdkDropList [cdkDropListData]="assignments" class="example-list" (cdkDropListDropped)="drop($event)">
-		<div cdkDrag [cdkDragData]="assignment" class="example-box" *ngFor="let assignment of assignments" cdkDragBoundary=".example-list">{{assignment}}</div>
+	<div cdkDropList [cdkDropListData]="assignments" (cdkDropListDropped)="drop($event)" class="assignments-list">
+		<div cdkDrag [cdkDragData]="assignment" cdkDragBoundary=".assignments-list" 
+      *ngFor="let assignment of assignments" class="assignment-item">
+			{{assignment}}
+		</div>
 	</div>
 </div>
 
-<div class="more-info">
-	More info:
-	<a href="https://material.angular.io/cdk/drag-drop/overview#reordering-lists">
-		Drag and Drop | Angular Material
-	</a>
-</div>
