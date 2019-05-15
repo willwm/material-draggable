@@ -27,6 +27,14 @@
   border: none;
 }
 
+.assignment-order {
+  flex: 0 0 2rem;
+}
+
+.assignment-name {
+  flex: 1 1 auto;
+}
+
 /* https://material.angular.io/cdk/drag-drop/overview#styling */
 
 .cdk-drag-preview {

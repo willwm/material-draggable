@@ -4,13 +4,14 @@
 
 <div class="table">
 	<div class="table-header">
-		Assignment Name
+		Assignments
 	</div>
 
 	<div cdkDropList [cdkDropListData]="assignments" (cdkDropListDropped)="drop($event)" class="assignments-list">
 		<div cdkDrag [cdkDragData]="assignment" cdkDragBoundary=".assignments-list" 
       *ngFor="let assignment of assignments" class="assignment-item">
-			{{assignment}}
+      <div class="assignment-order">{{assignment.SortOrder}}.</div>
+			<div class="assignment-name">{{assignment.Name}}</div>
 		</div>
 	</div>
 </div>
