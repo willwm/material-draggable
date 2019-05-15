@@ -7,18 +7,18 @@ import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  movies = [
-    'Episode I - The Phantom Menace',
-    'Episode II - Attack of the Clones',
-    'Episode III - Revenge of the Sith',
-    'Episode IV - A New Hope',
-    'Episode V - The Empire Strikes Back',
-    'Episode VI - Return of the Jedi',
-    'Episode VII - The Force Awakens',
-    'Episode VIII - The Last Jedi'
+  assignments = [
+    'Practice Assessment 5th Grade',
+    'Home Row: Home Row F and J',
+    'Adaptive Keyboarding: The Great Keyboarding Adventure',
+    'Online Communication: Using Digital Collaboration Tools',
+    'Group Story (Updated!)',
+    'Patterns and Directions Unit Quiz',
+    'Touch Keyboarding',
+    'Keyboarding: Drill 1',
   ];
 
   drop(event: CdkDragDrop<string[]>) {
-    moveItemInArray(this.movies, event.previousIndex, event.currentIndex);
+    moveItemInArray(this.assignments, event.previousIndex, event.currentIndex);
   }
 }
