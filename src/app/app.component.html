@@ -7,8 +7,8 @@
 		Assignment Name
 	</div>
 
-	<div cdkDropList class="example-list" (cdkDropListDropped)="drop($event)">
-		<div class="example-box" *ngFor="let assignment of assignments" cdkDrag cdkDragBoundary=".example-list">{{assignment}}</div>
+	<div cdkDropList [cdkDropListData]="assignments" class="example-list" (cdkDropListDropped)="drop($event)">
+		<div cdkDrag [cdkDragData]="assignment" class="example-box" *ngFor="let assignment of assignments" cdkDragBoundary=".example-list">{{assignment}}</div>
 	</div>
 </div>
 

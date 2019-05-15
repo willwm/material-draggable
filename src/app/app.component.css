@@ -48,17 +48,13 @@ mat-card {
   justify-content: space-between;
   box-sizing: border-box;
   cursor: move;
-  background: white;
+  background-color: white;
   font-size: 14px;
   border-top: 1px solid #dee2e6;
 }
 
-.cdk-drop-list .example-box:nth-of-type(odd) {
-    background-color: rgba(0,0,0,0.05);
-}
-
-.cdk-drop-list-dragging .example-box:nth-of-type(odd) {
-    background-color: inherit;
+.example-box:nth-of-type(odd) {
+  background-color: rgba(0,0,0,0.05);
 }
 
 .cdk-drag-preview {
@@ -73,14 +69,14 @@ mat-card {
   opacity: 0;
 }
 
+.cdk-drop-list-dragging .cdk-drag {
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+
 .cdk-drag-animating {
   transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
 }
 
-.example-box:last-child {
-  border: none;
-}
-
-.example-list.cdk-drop-list-dragging .example-box:not(.cdk-drag-placeholder) {
+.cdk-drop-list-dragging .example-box:not(.cdk-drag-placeholder) {
   transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
 }
