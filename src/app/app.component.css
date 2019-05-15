@@ -53,8 +53,12 @@ mat-card {
   border-top: 1px solid #dee2e6;
 }
 
-.example-box:nth-of-type(odd) {
+.cdk-drop-list .example-box:nth-of-type(odd) {
     background-color: rgba(0,0,0,0.05);
+}
+
+.cdk-drop-list-dragging .example-box:nth-of-type(odd) {
+    background-color: inherit;
 }
 
 .cdk-drag-preview {
